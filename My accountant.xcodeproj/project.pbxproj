@@ -72,6 +72,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		B2AAAC6A288D6A1A003E8181 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B2BF0166286AD6DD0056EAC1 /* SceneDelegate.swift */,
+				B2BF0164286AD6DD0056EAC1 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		B2BF0158286AD6DD0056EAC1 = {
 			isa = PBXGroup;
 			children = (
@@ -91,10 +100,9 @@
 		B2BF0163286AD6DD0056EAC1 /* My accountant */ = {
 			isa = PBXGroup;
 			children = (
+				B2AAAC6A288D6A1A003E8181 /* Delegates */,
 				B2899302287329D30015D321 /* Services */,
 				B28992FD2872EF120015D321 /* Models */,
-				B2BF0164286AD6DD0056EAC1 /* AppDelegate.swift */,
-				B2BF0166286AD6DD0056EAC1 /* SceneDelegate.swift */,
 				B2BF017B286AD6FF0056EAC1 /* MainVC.swift */,
 				B2BF017F286ADED50056EAC1 /* Cells */,
 				B2BF016A286AD6DD0056EAC1 /* Main.storyboard */,
@@ -102,9 +110,9 @@
 				B2BF0172286AD6E00056EAC1 /* LaunchScreen.storyboard */,
 				B2BF0175286AD6E00056EAC1 /* Info.plist */,
 				B2BF0180286B10AE0056EAC1 /* ExpenseTransactionScreen.swift */,
+				B2AB3A81287722F000039643 /* IncomeTransactionScreen.swift */,
 				B28992F8286F92850015D321 /* CategoryVC.swift */,
 				B2BF016D286AD6DD0056EAC1 /* My_accountant.xcdatamodeld */,
-				B2AB3A81287722F000039643 /* IncomeTransactionScreen.swift */,
 			);
 			path = "My accountant";
 			sourceTree = "<group>";
