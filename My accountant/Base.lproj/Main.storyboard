@@ -667,6 +667,16 @@
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="RjV-k8-4WG">
                                         <rect key="frame" x="0.0" y="660" width="447" height="216"/>
                                     </datePicker>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jcv-vy-RQv">
+                                        <rect key="frame" x="0.0" y="96" width="447" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="q0E-XV-qmz"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="expense"/>
+                                            <segment title="income"/>
+                                        </segments>
+                                    </segmentedControl>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="bXg-BF-rKH"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
@@ -675,10 +685,13 @@
                                     <constraint firstItem="bXg-BF-rKH" firstAttribute="trailing" secondItem="1iC-5f-XwI" secondAttribute="trailing" constant="20" id="34B-kK-nw9"/>
                                     <constraint firstItem="RjV-k8-4WG" firstAttribute="leading" secondItem="ih8-R3-Xgg" secondAttribute="leading" id="4wy-Bl-eqh"/>
                                     <constraint firstAttribute="bottom" secondItem="RjV-k8-4WG" secondAttribute="bottom" constant="20" symbolic="YES" id="HDm-AT-Nwd"/>
+                                    <constraint firstItem="bXg-BF-rKH" firstAttribute="trailing" secondItem="Jcv-vy-RQv" secondAttribute="trailing" id="HKU-mY-Ea8"/>
                                     <constraint firstItem="1iC-5f-XwI" firstAttribute="centerY" secondItem="bXg-BF-rKH" secondAttribute="centerY" id="IeM-hq-1ZL"/>
                                     <constraint firstItem="bXg-BF-rKH" firstAttribute="trailing" secondItem="RjV-k8-4WG" secondAttribute="trailing" id="QrC-V8-QLY"/>
+                                    <constraint firstItem="Jcv-vy-RQv" firstAttribute="leading" secondItem="bXg-BF-rKH" secondAttribute="leading" id="X79-Op-0bi"/>
                                     <constraint firstItem="1iC-5f-XwI" firstAttribute="leading" secondItem="bXg-BF-rKH" secondAttribute="leading" constant="20" id="c6R-3o-uWp"/>
                                     <constraint firstItem="bXg-BF-rKH" firstAttribute="trailing" secondItem="1iC-5f-XwI" secondAttribute="trailing" constant="30" id="nL5-0L-VFE"/>
+                                    <constraint firstItem="Jcv-vy-RQv" firstAttribute="top" secondItem="bXg-BF-rKH" secondAttribute="top" constant="8" id="r4X-mc-w4A"/>
                                     <constraint firstItem="1iC-5f-XwI" firstAttribute="leading" secondItem="bXg-BF-rKH" secondAttribute="leading" constant="30" id="z6Y-h4-aXh"/>
                                 </constraints>
                             </view>
@@ -700,6 +713,7 @@
                         <outlet property="datePicker" destination="RjV-k8-4WG" id="T0M-oe-XTX"/>
                         <outlet property="dateTextField" destination="xJA-7G-M0x" id="j5l-9j-Eyu"/>
                         <outlet property="descriptionTextField" destination="LeS-rG-wbf" id="dBt-SR-6QV"/>
+                        <outlet property="segmentControl" destination="Jcv-vy-RQv" id="bG0-XH-p5G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K93-VV-Cek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

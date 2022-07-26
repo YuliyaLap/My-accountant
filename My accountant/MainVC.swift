@@ -48,7 +48,7 @@ class mainVC: UIViewController {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let nextVC = storyBoard.instantiateViewController(withIdentifier: "\(IncomeTransactionScreen.self)") as? IncomeTransactionScreen else {return}
         navigationController?.pushViewController(nextVC, animated: true)
-        
+
     }
     //MARK: - Setup Metod's
     

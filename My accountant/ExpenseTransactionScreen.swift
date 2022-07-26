@@ -8,12 +8,13 @@
 import UIKit
 
 protocol TransactionHandler {
-    func newTransaction(amount: Float, category: String, note: String, date: Date, newTransaction: Bool)
+    func newTransaction(spend: Bool, amount: Float, category: String, note: String, date: Date, newTransaction: Bool)
 }
 
 
 class ExpenseTransactionScreen: UIViewController, Category, UITextFieldDelegate  {
 
+    @IBOutlet var segmentControl: UISegmentedControl!
     @IBOutlet var amountTextField: UITextField!
     @IBOutlet var categoryTextField: UITextField!
     @IBOutlet var descriptionTextField: UITextField!
@@ -22,6 +23,7 @@ class ExpenseTransactionScreen: UIViewController, Category, UITextFieldDelegate 
 
     var newTransaction: Bool = true
     var delegate: TransactionHandler?
+    var moneySpend: Bool = true
     
     var amount = Float()
     var category = String()
@@ -66,7 +68,13 @@ class ExpenseTransactionScreen: UIViewController, Category, UITextFieldDelegate 
             descriptionTextField.resignFirstResponder()
             return true
         }
-   
+    @IBAction func segmentedSwitcher(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            moneySpend = true
+        } else {
+            moneySpend = false
+        }
+    }
         
         @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
             let floatNumber = (amountTextField.text! as NSString).floatValue
@@ -77,7 +85,7 @@ class ExpenseTransactionScreen: UIViewController, Category, UITextFieldDelegate 
                 alert.addAction(action)
                 present(alert, animated: true, completion: nil)
             } else {
-                delegate?.newTransaction(amount: floatNumber, category: categoryTextField.text!, note: descriptionTextField.text!, date: datePicker.date, newTransaction: newTransaction)
+                delegate?.newTransaction(spend: moneySpend, amount: floatNumber, category: categoryTextField.text!, note: descriptionTextField.text!, date: datePicker.date, newTransaction: newTransaction)
                 navigationController?.popToRootViewController(animated: true)
             }
         }
@@ -100,13 +108,7 @@ class ExpenseTransactionScreen: UIViewController, Category, UITextFieldDelegate 
         func selectedCategory(category: String) {
             categoryTextField.text = category
         }
-        
-//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            if segue.identifier == "showCategories" {
-//                let destinationVC = segue.destination as! CategoryVC
-//                destinationVC.delegate = self
-//            }
-//        }
+
     }
 
     extension UITextField{
@@ -129,32 +131,6 @@ class ExpenseTransactionScreen: UIViewController, Category, UITextFieldDelegate 
         }
     }
 
-    
-//    private func loadData(){
-//        let request = Transaction.fetchRequest()
-//        request.sortDescriptors = [NSSortDescriptor(key: #keyPath(Transaction.amount
-//                                                                 ), ascending: true )]
-//        let transactions = try? CoreDataService.mainContext.fetch(request)
-//    }
-//    
-//    
-//    @IBAction func saveDidTap(){
-//        let amount = displayLabel.text
-//        let note = descriptionTextField.text
-//        let category = categoryTextField.text
-//        let date = datePicker.date
-//        
-//        let transactions = Transaction(context: CoreDataService.mainContext)
-//        
-////
-//        
-//        transactions.note = note
-//        transactions.category = category
-//        transactions.date = date
-//        
-//        CoreDataService.saveContext()
-//    }
-// 
     
 
     
