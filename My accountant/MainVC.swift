@@ -13,8 +13,7 @@ class mainVC: UIViewController {
     @IBOutlet var mainTableView: UITableView!
     @IBOutlet var lowerView: UIView!
     @IBOutlet var balanceLabel: UILabel!
-    @IBOutlet private weak var expensesButton: UIButton!
-    @IBOutlet private weak var incomesButton: UIButton!
+
     
     let defaults = UserDefaults.standard
     var balance: Float = 0
@@ -32,39 +31,16 @@ class mainVC: UIViewController {
         
         lowerView?.layer.cornerRadius = 10
         lowerView?.layer.masksToBounds = true
-        setupExpensesButton()
-        setupIncomesButton()
+    
     }
     
-    @IBAction private func addExpensesTransactionButtonDidTap() {
+    @IBAction private func addTransactionButtonDidTap() {
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC = storyBoard.instantiateViewController(withIdentifier: "\(ExpenseTransactionScreen.self)")
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
-    @IBAction private func addIncomeButtonDidTap() {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        guard let nextVC = storyBoard.instantiateViewController(withIdentifier: "\(IncomeTransactionScreen.self)") as? IncomeTransactionScreen else {return}
-        navigationController?.pushViewController(nextVC, animated: true)
-    }
-    
-    //MARK: - Setup Metod's
-    
-    private func setupExpensesButton() {
-        
-        expensesButton.layer.borderWidth = 3.0
-        expensesButton.layer.borderColor = UIColor.darkGray.cgColor
-        expensesButton.layer.cornerRadius =  10
-        expensesButton.clipsToBounds = true
-    }
-    
-    private func setupIncomesButton() {
-        incomesButton.layer.borderWidth = 3.0
-        incomesButton.layer.borderColor = UIColor.darkGray.cgColor
-        incomesButton.layer.cornerRadius = 10
-        incomesButton.clipsToBounds = true
-    }
 }
 
 extension mainVC: UITableViewDelegate, UITableViewDataSource {
