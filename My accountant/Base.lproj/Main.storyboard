@@ -510,10 +510,10 @@
             </objects>
             <point key="canvasLocation" x="7284.057971014493" y="-194.19642857142856"/>
         </scene>
-        <!--Expense Transaction Screen-->
+        <!--Transaction Screen-->
         <scene sceneID="bXT-sg-Ms8">
             <objects>
-                <viewController storyboardIdentifier="ExpenseTransactionScreen" id="TQB-l9-64w" customClass="ExpenseTransactionScreen" customModule="My_accountant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TransactionScreen" id="TQB-l9-64w" customClass="TransactionScreen" customModule="My_accountant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Mt-bC-K7f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -627,6 +627,7 @@
                                     </datePicker>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jcv-vy-RQv">
                                         <rect key="frame" x="0.0" y="96" width="447" height="31"/>
+                                        <color key="backgroundColor" red="0.1723218923" green="0.26787966410000003" blue="0.3128310695" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="q0E-XV-qmz"/>
                                         </constraints>
@@ -637,7 +638,7 @@
                                     </segmentedControl>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="bXg-BF-rKH"/>
-                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.48031658179999998" green="0.6882088958" blue="0.72046522660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="1iC-5f-XwI" firstAttribute="centerX" secondItem="bXg-BF-rKH" secondAttribute="centerX" id="0rr-Wk-sDK"/>
                                     <constraint firstItem="bXg-BF-rKH" firstAttribute="trailing" secondItem="1iC-5f-XwI" secondAttribute="trailing" constant="20" id="34B-kK-nw9"/>
@@ -784,177 +785,8 @@
             </objects>
             <point key="canvasLocation" x="1798.5507246376812" y="-217.63392857142856"/>
         </scene>
-        <!--Income Transaction Screen-->
-        <scene sceneID="aM1-j1-Ytv">
-            <objects>
-                <viewController storyboardIdentifier="IncomeTransactionScreen" id="Dro-Lh-jD8" customClass="IncomeTransactionScreen" customModule="My_accountant" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bzT-ze-0fs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" id="Fot-vK-Hn0">
-                                <rect key="frame" x="-18" y="0.0" width="447" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IbG-Pb-3zR">
-                                        <rect key="frame" x="20" y="301" width="397" height="348"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="eZw-bv-unt">
-                                                <rect key="frame" x="0.0" y="0.0" width="397" height="72"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73j-tI-22S">
-                                                        <rect key="frame" x="0.0" y="0.0" width="397" height="34"/>
-                                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F6Q-hY-bGG" customClass="TextFieldVIew" customModule="My_accountant" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="38" width="397" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zLH-Tz-r9I">
-                                                <rect key="frame" x="0.0" y="92" width="397" height="72"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTq-g1-k6s">
-                                                        <rect key="frame" x="0.0" y="0.0" width="397" height="34"/>
-                                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nMC-k7-AdA">
-                                                        <rect key="frame" x="0.0" y="38" width="397" height="34"/>
-                                                        <subviews>
-                                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GSU-pV-h6M" customClass="TextFieldVIew" customModule="My_accountant" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="368" height="34"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <textInputTraits key="textInputTraits" keyboardAppearance="light" returnKeyType="done"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </textField>
-                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aO-Mx-oTI">
-                                                                <rect key="frame" x="376" y="6.5" width="21" height="21"/>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="0qF-0m-cex">
-                                                <rect key="frame" x="0.0" y="184" width="397" height="72"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPC-oJ-klF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="397" height="34"/>
-                                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HKc-QM-7XK" customClass="TextFieldVIew" customModule="My_accountant" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="38" width="397" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" keyboardAppearance="light" returnKeyType="done"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="uhD-xe-abD">
-                                                <rect key="frame" x="0.0" y="276" width="397" height="72"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oih-s9-ODX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="397" height="34"/>
-                                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vAa-fu-QTL" customClass="TextFieldVIew" customModule="My_accountant" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="38" width="397" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" keyboardAppearance="light"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="X1w-W7-OXl">
-                                        <rect key="frame" x="0.0" y="660" width="447" height="216"/>
-                                    </datePicker>
-                                </subviews>
-                                <viewLayoutGuide key="safeArea" id="qDD-kw-UAx"/>
-                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="qDD-kw-UAx" firstAttribute="trailing" secondItem="IbG-Pb-3zR" secondAttribute="trailing" constant="20" id="81d-PV-9cX"/>
-                                    <constraint firstItem="qDD-kw-UAx" firstAttribute="trailing" secondItem="X1w-W7-OXl" secondAttribute="trailing" id="MDG-ev-ak8"/>
-                                    <constraint firstItem="IbG-Pb-3zR" firstAttribute="leading" secondItem="qDD-kw-UAx" secondAttribute="leading" constant="30" id="UIX-7U-LHC"/>
-                                    <constraint firstAttribute="bottom" secondItem="X1w-W7-OXl" secondAttribute="bottom" constant="20" symbolic="YES" id="UuO-5B-5tb"/>
-                                    <constraint firstItem="qDD-kw-UAx" firstAttribute="trailing" secondItem="IbG-Pb-3zR" secondAttribute="trailing" constant="30" id="VWd-C7-1eM"/>
-                                    <constraint firstItem="IbG-Pb-3zR" firstAttribute="leading" secondItem="qDD-kw-UAx" secondAttribute="leading" constant="20" id="nCf-ci-fhI"/>
-                                    <constraint firstItem="X1w-W7-OXl" firstAttribute="leading" secondItem="Fot-vK-Hn0" secondAttribute="leading" id="quS-yO-wBH"/>
-                                    <constraint firstItem="IbG-Pb-3zR" firstAttribute="centerX" secondItem="qDD-kw-UAx" secondAttribute="centerX" id="vP3-10-qWZ"/>
-                                    <constraint firstItem="IbG-Pb-3zR" firstAttribute="centerY" secondItem="qDD-kw-UAx" secondAttribute="centerY" id="znM-SB-LpP"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="lO0-16-jV6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1v0-QR-gw7">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Qky-eK-77o">
-                            <color key="tintColor" systemColor="labelColor"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="categoryTextField" destination="GSU-pV-h6M" id="sXA-6S-Sbj"/>
-                        <outlet property="datePicker" destination="X1w-W7-OXl" id="fT7-1e-0rL"/>
-                        <outlet property="dateTextField" destination="vAa-fu-QTL" id="ksk-2g-e8X"/>
-                        <outlet property="descriptionTextField" destination="HKc-QM-7XK" id="5Es-5q-vyH"/>
-                        <outlet property="displayLabel" destination="F6Q-hY-bGG" id="LRB-wT-RH0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5lx-BY-1Yu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2709" y="483"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="QQv-4o-kdO">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uhA-EV-g4t" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UMK-X8-AmO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Dro-Lh-jD8" kind="relationship" relationship="rootViewController" id="B2Q-9z-xBm"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DQC-Df-UnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1896" y="465"/>
-        </scene>
     </scenes>
     <resources>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

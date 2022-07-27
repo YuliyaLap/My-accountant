@@ -12,7 +12,7 @@ protocol TransactionHandler {
     func newTransaction(spend: Bool, amount: Float, category: String, note: String, date: Date, newTransaction: Bool)
 }
 
-class ExpenseTransactionScreen: UIViewController, Category, UITextFieldDelegate  {
+class TransactionScreen: UIViewController, Category, UITextFieldDelegate  {
     
     @IBOutlet var segmentControl: UISegmentedControl!
     @IBOutlet var amountTextField: UITextField!

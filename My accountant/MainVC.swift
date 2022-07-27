@@ -37,7 +37,7 @@ class mainVC: UIViewController {
     @IBAction private func addTransactionButtonDidTap() {
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let nextVC = storyBoard.instantiateViewController(withIdentifier: "\(ExpenseTransactionScreen.self)")
+        let nextVC = storyBoard.instantiateViewController(withIdentifier: "\(TransactionScreen.self)")
         navigationController?.pushViewController(nextVC, animated: true)
     }
     

@@ -12,7 +12,6 @@
 		B28993002872EF440015D321 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28992FE2872EF440015D321 /* Transaction+CoreDataClass.swift */; };
 		B28993012872EF440015D321 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28992FF2872EF440015D321 /* Transaction+CoreDataProperties.swift */; };
 		B289930428732A0C0015D321 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B289930328732A0C0015D321 /* CoreDataService.swift */; };
-		B2AB3A82287722F000039643 /* IncomeTransactionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AB3A81287722F000039643 /* IncomeTransactionScreen.swift */; };
 		B2BF0165286AD6DD0056EAC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF0164286AD6DD0056EAC1 /* AppDelegate.swift */; };
 		B2BF0167286AD6DD0056EAC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF0166286AD6DD0056EAC1 /* SceneDelegate.swift */; };
 		B2BF016C286AD6DD0056EAC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BF016A286AD6DD0056EAC1 /* Main.storyboard */; };
@@ -21,7 +20,7 @@
 		B2BF0174286AD6E00056EAC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BF0172286AD6E00056EAC1 /* LaunchScreen.storyboard */; };
 		B2BF017C286AD6FF0056EAC1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF017B286AD6FF0056EAC1 /* MainVC.swift */; };
 		B2BF017E286ADE3F0056EAC1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF017D286ADE3F0056EAC1 /* MainTableViewCell.swift */; };
-		B2BF0181286B10AE0056EAC1 /* ExpenseTransactionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF0180286B10AE0056EAC1 /* ExpenseTransactionScreen.swift */; };
+		B2BF0181286B10AE0056EAC1 /* TransactionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF0180286B10AE0056EAC1 /* TransactionScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +29,6 @@
 		B28992FE2872EF440015D321 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		B28992FF2872EF440015D321 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B289930328732A0C0015D321 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
-		B2AB3A81287722F000039643 /* IncomeTransactionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeTransactionScreen.swift; sourceTree = "<group>"; };
 		B2BF0161286AD6DD0056EAC1 /* My accountant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My accountant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BF0164286AD6DD0056EAC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2BF0166286AD6DD0056EAC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +39,7 @@
 		B2BF0175286AD6E00056EAC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2BF017B286AD6FF0056EAC1 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B2BF017D286ADE3F0056EAC1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
-		B2BF0180286B10AE0056EAC1 /* ExpenseTransactionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTransactionScreen.swift; sourceTree = "<group>"; };
+		B2BF0180286B10AE0056EAC1 /* TransactionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +107,7 @@
 				B2BF0170286AD6E00056EAC1 /* Assets.xcassets */,
 				B2BF0172286AD6E00056EAC1 /* LaunchScreen.storyboard */,
 				B2BF0175286AD6E00056EAC1 /* Info.plist */,
-				B2BF0180286B10AE0056EAC1 /* ExpenseTransactionScreen.swift */,
-				B2AB3A81287722F000039643 /* IncomeTransactionScreen.swift */,
+				B2BF0180286B10AE0056EAC1 /* TransactionScreen.swift */,
 				B28992F8286F92850015D321 /* CategoryVC.swift */,
 				B2BF016D286AD6DD0056EAC1 /* My_accountant.xcdatamodeld */,
 			);
@@ -198,14 +195,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B28993012872EF440015D321 /* Transaction+CoreDataProperties.swift in Sources */,
-				B2AB3A82287722F000039643 /* IncomeTransactionScreen.swift in Sources */,
 				B28992F9286F92850015D321 /* CategoryVC.swift in Sources */,
 				B2BF0165286AD6DD0056EAC1 /* AppDelegate.swift in Sources */,
 				B2BF017C286AD6FF0056EAC1 /* MainVC.swift in Sources */,
 				B2BF0167286AD6DD0056EAC1 /* SceneDelegate.swift in Sources */,
 				B28993002872EF440015D321 /* Transaction+CoreDataClass.swift in Sources */,
 				B2BF016F286AD6DD0056EAC1 /* My_accountant.xcdatamodeld in Sources */,
-				B2BF0181286B10AE0056EAC1 /* ExpenseTransactionScreen.swift in Sources */,
+				B2BF0181286B10AE0056EAC1 /* TransactionScreen.swift in Sources */,
 				B289930428732A0C0015D321 /* CoreDataService.swift in Sources */,
 				B2BF017E286ADE3F0056EAC1 /* MainTableViewCell.swift in Sources */,
 				B28992FB286F953E0015D321 /* CategoryTableViewCell.swift in Sources */,
