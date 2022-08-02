@@ -3,4 +3,99 @@
    uuid = "5084E9DD-43E2-4332-B434-2686AF8F5D1F"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E7ADD44C-52A0-4C2C-A798-FF1C3A74F40E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "My accountant/MainVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "MainVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "E7ADD44C-52A0-4C2C-A798-FF1C3A74F40E - f4f9d835c60edb6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_accountant.MainVC.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; My_accountant.MainVC"
+                  moduleName = "My accountant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yulia/Desktop/Yulia%20dev/IT%20Academy/Tasks/My%20accountant/My%20accountant/MainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  uuid = "E7ADD44C-52A0-4C2C-A798-FF1C3A74F40E - b35744ace3845ffd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_accountant.MainVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; My_accountant.MainVC"
+                  moduleName = "My accountant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yulia/Desktop/Yulia%20dev/IT%20Academy/Tasks/My%20accountant/My%20accountant/MainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "189">
+               </Location>
+               <Location
+                  uuid = "E7ADD44C-52A0-4C2C-A798-FF1C3A74F40E - 60f1a82daa3df25b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_accountant.MainVC.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;My_accountant.MainVC&gt;"
+                  moduleName = "My accountant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yulia/Desktop/Yulia%20dev/IT%20Academy/Tasks/My%20accountant/My%20accountant/MainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "E7ADD44C-52A0-4C2C-A798-FF1C3A74F40E - 830509a0e3af49b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_accountant.MainVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;My_accountant.MainVC&gt;"
+                  moduleName = "My accountant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yulia/Desktop/Yulia%20dev/IT%20Academy/Tasks/My%20accountant/My%20accountant/MainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "149">
+               </Location>
+               <Location
+                  uuid = "E7ADD44C-52A0-4C2C-A798-FF1C3A74F40E - 5319b08912d5b16a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_accountant.MainVC.__deallocating_deinit"
+                  moduleName = "My accountant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yulia/Desktop/Yulia%20dev/IT%20Academy/Tasks/My%20accountant/My%20accountant/MainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
