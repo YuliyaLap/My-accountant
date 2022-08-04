@@ -9,16 +9,14 @@ import UIKit
 import CoreData
 
 class MainVC: UIViewController, TransactionHandler  {
-  
-
+    
+    
     @IBOutlet var mainTableView: UITableView!
     @IBOutlet var lowerView: UIView!
     @IBOutlet var balanceLabel: UILabel!
-
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var fetchedResultController: NSFetchedResultsController<Transaction>!
-    
     
     let defaults = UserDefaults.standard
     var balance: Float = 0
@@ -37,7 +35,7 @@ class MainVC: UIViewController, TransactionHandler  {
         
         lowerView?.layer.cornerRadius = 10
         lowerView?.layer.masksToBounds = true
-    
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,7 +50,6 @@ class MainVC: UIViewController, TransactionHandler  {
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
-    
     func saveData() {
         do {
             try context.save()
@@ -62,7 +59,6 @@ class MainVC: UIViewController, TransactionHandler  {
         
         mainTableView.reloadData()
     }
-    
     
     func loadData() {
         
@@ -82,19 +78,16 @@ class MainVC: UIViewController, TransactionHandler  {
         mainTableView.reloadData()
     }
     
-
-    
     func balanceOperation(spend: Bool, amount: Float) {
         if spend == true {
             balance -= amount
             defaults.set(balance, forKey: "Balance")
-            
         } else {
             balance += amount
             defaults.set(balance, forKey: "Balance")
         }
     }
-
+    
     func configureCell(_ cell: MainTableViewCell, at indexPath: IndexPath) {
         guard let transaction = self.fetchedResultController?.object(at: indexPath) else {
             fatalError("Can't configure cell")
@@ -137,7 +130,7 @@ class MainVC: UIViewController, TransactionHandler  {
             }
         }
     }
-
+    
     
     func newTransaction(spend: Bool, amount: Float, category: String, note: String, date: Date, newTransaction: Bool) {
         if newTransaction == true {
@@ -149,7 +142,6 @@ class MainVC: UIViewController, TransactionHandler  {
             transaction.amount = amount
             transaction.expense = spend
             
-            
         } else {
             guard let transaction = fetchedResultController?.object(at: index) else { fatalError("No object with this IndexPath") }
             transaction.amount = amount
@@ -159,27 +151,22 @@ class MainVC: UIViewController, TransactionHandler  {
             transaction.date = date
             
             balanceOperation(spend: spend, amount: amount)
-            
             mainTableView.reloadData()
         }
     }
-    
-    
 }
-
-
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)-> Int {
         
-    guard let sections = self.fetchedResultController.sections else  {
-        fatalError("No sections in fetchedResultController")
-    }
-    let sectionInfo = sections[section]
+        guard let sections = self.fetchedResultController.sections else  {
+            fatalError("No sections in fetchedResultController")
+        }
+        let sectionInfo = sections[section]
         return sectionInfo.numberOfObjects
-}
-
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = mainTableView.dequeueReusableCell(withIdentifier: "\(MainTableViewCell.self)", for: indexPath)
         configureCell(cell as! MainTableViewCell, at: indexPath)
@@ -190,7 +177,6 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         guard let sectionInfo = fetchedResultController?.sections?[section] else {
             return nil
         }
-
         return sectionInfo.name
     }
     
@@ -239,12 +225,10 @@ extension Transaction {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MMMM dd"
             dateFormatter.locale = NSLocale(localeIdentifier: "en_US") as Locale
-            
             return dateFormatter.string(from: date!)
         }
     }
 }
-
 
 extension MainVC: NSFetchedResultsControllerDelegate {
     
@@ -257,12 +241,12 @@ extension MainVC: NSFetchedResultsControllerDelegate {
     }
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-
+        
         switch type {
         case .insert:
             if let indexPath = newIndexPath {
                 print("Added:\(indexPath)")
-               mainTableView.insertRows(at: [indexPath], with: .fade)
+                mainTableView.insertRows(at: [indexPath], with: .fade)
             }
             break
         case .delete:
@@ -275,32 +259,32 @@ extension MainVC: NSFetchedResultsControllerDelegate {
             if let indexPath = indexPath {
                 mainTableView.reloadRows(at: [indexPath], with: .fade)
             }
-                break
-            case .move:
-                if let indexPath = indexPath {
-                    mainTableView.deleteRows(at: [indexPath], with: .fade)
-                }
-                if let newIndexPath = newIndexPath {
-                    print("Move:\(newIndexPath)")
-                    mainTableView.insertRows(at: [newIndexPath], with: .fade)
-                }
-                break
-            @unknown default:
-                break
+            break
+        case .move:
+            if let indexPath = indexPath {
+                mainTableView.deleteRows(at: [indexPath], with: .fade)
             }
-        }
-        
-        func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
-            switch type {
-            case .insert:
-                mainTableView.insertSections(NSIndexSet(index: sectionIndex) as IndexSet, with: .fade)
-                break
-            case .delete:
-                mainTableView.deleteSections(NSIndexSet(index: sectionIndex) as IndexSet, with: .fade)
-                break
-            default:
-                break
+            if let newIndexPath = newIndexPath {
+                print("Move:\(newIndexPath)")
+                mainTableView.insertRows(at: [newIndexPath], with: .fade)
             }
+            break
+        @unknown default:
+            break
         }
     }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        switch type {
+        case .insert:
+            mainTableView.insertSections(NSIndexSet(index: sectionIndex) as IndexSet, with: .fade)
+            break
+        case .delete:
+            mainTableView.deleteSections(NSIndexSet(index: sectionIndex) as IndexSet, with: .fade)
+            break
+        default:
+            break
+        }
+    }
+}
 

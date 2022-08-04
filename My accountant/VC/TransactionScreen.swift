@@ -37,6 +37,12 @@ class TransactionScreen: UIViewController, Category, UITextFieldDelegate  {
             datePicker.date = date
             updateDate()
             
+            if moneySpend == true {
+                segmentControl.selectedSegmentIndex = 0
+            } else {
+                segmentControl.selectedSegmentIndex = 1
+            }
+            
             DispatchQueue.main.async {
                 self.amountTextField.text = "\(self.amount)"
                 self.categoryTextField.text = self.category
