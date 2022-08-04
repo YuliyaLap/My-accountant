@@ -113,6 +113,7 @@
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <action selector="addTransactionButtonDidTap" destination="BYZ-38-t0r" id="n3T-hq-0Mv"/>
+                                <segue destination="TQB-l9-64w" kind="show" identifier="newTransaction" id="DWT-um-YYE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -187,7 +188,7 @@
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpQ-GJ-Sxv">
                                                                 <rect key="frame" x="366" y="6.5" width="21" height="21"/>
                                                                 <connections>
-                                                                    <segue destination="w77-ix-yWo" kind="show" id="juq-1T-fxq"/>
+                                                                    <segue destination="w77-ix-yWo" kind="show" identifier="showCategories" id="juq-1T-fxq"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -294,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K93-VV-Cek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2708.6956521739135" y="-217.63392857142856"/>
+            <point key="canvasLocation" x="2046" y="-231"/>
         </scene>
         <!--CategoryVC-->
         <scene sceneID="vEI-U2-UiQ">
@@ -306,7 +307,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sur-47-OuF">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.1723218923" green="0.26787966410000003" blue="0.3128310695" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="92" id="ea5-Qu-1l5" customClass="CategoryTableViewCell" customModule="My_accountant" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="92"/>
@@ -327,7 +328,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Ssp-PJ-ClP"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -340,6 +341,7 @@
                                                 <constraint firstItem="Qa9-zR-GVu" firstAttribute="leading" secondItem="ErA-qn-l39" secondAttribute="leading" constant="15" id="hdX-Wh-dE7"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.48031658179999998" green="0.6882088958" blue="0.72046522660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="categoryImage" destination="Qa9-zR-GVu" id="UBh-YB-85b"/>
                                             <outlet property="categoryLabel" destination="oZh-r2-ljT" id="ean-4R-63N"/>
@@ -349,7 +351,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="enZ-bh-xHO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1723218923" green="0.26787966410000003" blue="0.3128310695" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="sur-47-OuF" firstAttribute="top" secondItem="enZ-bh-xHO" secondAttribute="top" id="Ava-Bl-GGu"/>
                             <constraint firstItem="enZ-bh-xHO" firstAttribute="trailing" secondItem="sur-47-OuF" secondAttribute="trailing" id="CRG-s9-rLG"/>
@@ -364,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLM-od-fBh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3447.826086956522" y="-210.26785714285714"/>
+            <point key="canvasLocation" x="2809" y="-231"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Vx-9D-K6R">
@@ -383,24 +385,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sv0-K2-Z6w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Thr-hs-chP">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dbz-8U-m0T" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GfI-v3-3XV">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="TQB-l9-64w" kind="relationship" relationship="rootViewController" id="tNa-u7-9kB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EsQ-gi-V27" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1798.5507246376812" y="-217.63392857142856"/>
         </scene>
     </scenes>
     <resources>

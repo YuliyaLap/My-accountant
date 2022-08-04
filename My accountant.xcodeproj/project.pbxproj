@@ -47,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B28B25A7289ACFC700BFF4F7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				B2BF017B286AD6FF0056EAC1 /* MainVC.swift */,
+				B28992F8286F92850015D321 /* CategoryVC.swift */,
+				B2BF0180286B10AE0056EAC1 /* TransactionScreen.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		B2AAAC6A288D6A1A003E8181 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,15 +85,13 @@
 		B2BF0163286AD6DD0056EAC1 /* My accountant */ = {
 			isa = PBXGroup;
 			children = (
+				B28B25A7289ACFC700BFF4F7 /* VC */,
 				B2AAAC6A288D6A1A003E8181 /* Delegates */,
-				B2BF017B286AD6FF0056EAC1 /* MainVC.swift */,
 				B2BF017F286ADED50056EAC1 /* Cells */,
 				B2BF016A286AD6DD0056EAC1 /* Main.storyboard */,
 				B2BF0170286AD6E00056EAC1 /* Assets.xcassets */,
 				B2BF0172286AD6E00056EAC1 /* LaunchScreen.storyboard */,
 				B2BF0175286AD6E00056EAC1 /* Info.plist */,
-				B2BF0180286B10AE0056EAC1 /* TransactionScreen.swift */,
-				B28992F8286F92850015D321 /* CategoryVC.swift */,
 				B2BF016D286AD6DD0056EAC1 /* My_accountant.xcdatamodeld */,
 			);
 			path = "My accountant";

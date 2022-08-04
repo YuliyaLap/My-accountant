@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-@UIApplicationMain
+@main
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     lazy var persistentContainer: NSPersistentCloudKitContainer = {
     
-        let container = NSPersistentCloudKitContainer(name: "My_Cash")
+        let container = NSPersistentCloudKitContainer(name: "My_accountant")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")

@@ -101,7 +101,7 @@ class MainVC: UIViewController, TransactionHandler  {
         }
         
         cell.categoryLabel.text = transaction.category
-        cell.descriptionLabel.text = transaction.description ?? ""
+        cell.descriptionLabel.text = transaction.description
         
         if transaction.expense == true {
             cell.sumLabel.textColor = UIColor.red
@@ -121,6 +121,23 @@ class MainVC: UIViewController, TransactionHandler  {
             self.balance -= transaction.amount
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "newTransaction" {
+            let destinationVC = segue.destination as! TransactionScreen
+            destinationVC.delegate = self
+            
+            if let indexPath = mainTableView.indexPathForSelectedRow {
+                destinationVC.newTransaction = false
+                let transaction = fetchedResultController.object(at: indexPath)
+                destinationVC.amount = transaction.amount
+                destinationVC.category = transaction.category ?? ""
+                destinationVC.note = transaction.note ?? ""
+                destinationVC.date = transaction.date!
+                destinationVC.moneySpend = transaction.expense
+            }
+        }
+    }
+
     
     func newTransaction(spend: Bool, amount: Float, category: String, note: String, date: Date, newTransaction: Bool) {
         if newTransaction == true {

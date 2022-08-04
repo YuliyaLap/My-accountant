@@ -105,7 +105,16 @@ class TransactionScreen: UIViewController, Category, UITextFieldDelegate  {
     func selectedCategory(category: String) {
         categoryTextField.text = category
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCategories" {
+            let destinationVC = segue.destination as! CategoryVC
+            destinationVC.spend = moneySpend
+            destinationVC.delegate = self
+        }
+    }
 }
+
 
 extension UITextField {
     func addDoneButtonToKeyboard(myAction:Selector?){
