@@ -12,5 +12,5 @@ class CategoryTableViewCell: UITableViewCell {
     @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var categoryImage: UIImageView!
     
-    static let rowHeight: CGFloat = 70.0
+//    static let rowHeight: CGFloat = 70.0
 }

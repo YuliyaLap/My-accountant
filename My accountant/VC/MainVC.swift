@@ -158,6 +158,11 @@ class MainVC: UIViewController, TransactionHandler  {
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return fetchedResultController.sections!.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)-> Int {
         
         guard let sections = self.fetchedResultController.sections else  {
